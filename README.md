@@ -17,3 +17,7 @@ Python 3.8+
 Django 3+
 DRF 3.10+
 PostgreSQL 10+
+
+P.S:
+
+Командой python manage.py create_superuser можно будет добавить учетная запись 2@admin.ru с паролем spartak67 что бы войти в админку
