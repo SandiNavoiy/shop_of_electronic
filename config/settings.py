@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     "drf_yasg",
     "corsheaders",
     "drf_spectacular",
-
     "employee",
     "retail_network",
     "products",
@@ -79,7 +78,6 @@ DATABASES = {
         "NAME": os.getenv("POSTGRES_DB"),  # Название БД
         "USER": os.getenv("POSTGRES_USER"),  # Пользователь для подключения
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),  # Пароль для этого пользователя
-
     }
 }
 
@@ -126,7 +124,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 # Время жизни токена
 SIMPLE_JWT = {
@@ -137,9 +135,9 @@ SIMPLE_JWT = {
 # переопределение модели пользователя
 AUTH_USER_MODEL = "employee.Employee"
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
-    'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
+    "TITLE": "Your Project API",
+    "DESCRIPTION": "Your project description",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
     # OTHER SETTINGS
 }

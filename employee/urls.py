@@ -1,8 +1,13 @@
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.urls import path
 from employee.apps import EmployeeConfig
-from employee.views import EmployeeCreateAPIView, EmployeeListAPIView, EmployeeRetrieveAPIView, EmployeeUpdateAPIView, \
-    EmployeeDestroyAPIView
+from employee.views import (
+    EmployeeCreateAPIView,
+    EmployeeListAPIView,
+    EmployeeRetrieveAPIView,
+    EmployeeUpdateAPIView,
+    EmployeeDestroyAPIView,
+)
 
 app_name = EmployeeConfig.name
 

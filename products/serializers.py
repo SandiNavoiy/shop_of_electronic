@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-from retail_network.models import Retail_network
+from products.models import Product
 
 
-class Retail_networkSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     """Сериализатор для модели продукты"""
 
     class Meta:
-        model = Retail_network
+        model = Product
         fields = "__all__"  # Поля для отображе

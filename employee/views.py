@@ -34,7 +34,7 @@ class EmployeeUpdateAPIView(generics.UpdateAPIView):
 
     serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
-    permission_classes = [ IsAdminUser]
+    permission_classes = [IsAdminUser]
 
 
 class EmployeeDestroyAPIView(generics.DestroyAPIView):

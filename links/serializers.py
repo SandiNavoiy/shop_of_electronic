@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-from retail_network.models import Retail_network
+from links.models import Link
 
 
-class Retail_networkSerializer(serializers.ModelSerializer):
+class LinkSerializer(serializers.ModelSerializer):
     """Сериализатор для модели продукты"""
 
     class Meta:
-        model = Retail_network
+        model = Link
         fields = "__all__"  # Поля для отображе
