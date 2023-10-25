@@ -5,7 +5,8 @@ import os
 from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+dot_env = os.path.join(BASE_DIR, ".env")
+load_dotenv(dotenv_path=dot_env)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -35,6 +36,8 @@ INSTALLED_APPS = [
     "employee",
     "retail_network",
     "products",
+    "factory",
+    "links",
 ]
 
 MIDDLEWARE = [
@@ -77,7 +80,7 @@ DATABASES = {
         "NAME": os.getenv("POSTGRES_DB"),  # Название БД
         "USER": os.getenv("POSTGRES_USER"),  # Пользователь для подключения
         "PASSWORD": os.getenv("POSTGRES_PASSWORD"),  # Пароль для этого пользователя
-        'HOST': os.getenv('DATABASES_HOST'),  # Адрес, на котором развернут сервер БД
+
 
     }
 }
