@@ -29,6 +29,7 @@ urlpatterns = [
     path("", include("factory.urls", namespace="factory")),
     path("", include("links.urls", namespace="links")),
     path("", include("products.urls", namespace="products")),
+    path("", include("retail_network.urls", namespace="retail_network")),
     path(
         "docs/",
         schema_view.with_ui("swagger", cache_timeout=0),
