@@ -1,7 +1,16 @@
 from django.contrib import admin
+from django.db.models import QuerySet
 
-#
-# # Register your models here.
-# @admin.register(Employee)
-# class EmployeeAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'email', 'first_name', 'last_name')
+from retail_network.models import Retail_network
+
+
+# Register your models here.
+@admin.register(Retail_network)
+class RetailAdmin(admin.ModelAdmin):
+    list_display = ('title', 'contacts', 'debt')
+    date_hierarchy = 'release_date'  # иерархия по датам
+    actions = ('cancel_debt',)
+
+    @admin.action(description='Сбросить задолженность')
+    def cancel_debt(self, request, queryset: QuerySet):
+        queryset.update(debt=0.00)

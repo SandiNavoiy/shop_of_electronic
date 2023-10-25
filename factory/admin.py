@@ -6,3 +6,6 @@ from factory.models import Factory
 @admin.register(Factory)
 class FactoryAdmin(admin.ModelAdmin):
     list_display = ("title",)
+    date_hierarchy = 'release_date'   # иерархия по датам
+    list_display_links = ('title',)
+    empty_value_display = "Отсутствует"
