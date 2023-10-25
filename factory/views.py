@@ -1,4 +1,3 @@
-
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
@@ -12,6 +11,7 @@ class FactoryCreateAPIView(generics.CreateAPIView):
     serializer_class = FactorySerializer
     permission_classes = [IsAuthenticated]
 
+
 class FactoryListAPIView(generics.ListAPIView):
     """Контроллер для списка производителей"""
 
@@ -19,17 +19,20 @@ class FactoryListAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     pagination_class = FactoryPaginator
 
+
 class FactoryRetrieveAPIView(generics.RetrieveAPIView):
     """Контроллер для просмотра данных производителя"""
 
     serializer_class = FactorySerializer
     permission_classes = [IsAuthenticated]
 
+
 class FactoryUpdateAPIView(generics.UpdateAPIView):
     """Контроллер для обновления данных производителя"""
 
     serializer_class = FactorySerializer
     permission_classes = [IsAdminUser]
+
 
 class FactoryDestroyAPIView(generics.DestroyAPIView):
     """Контроллер для удаления данных производителя"""

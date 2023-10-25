@@ -11,18 +11,19 @@ class LinkCreateAPIView(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
 
 
-
 class LinkRetrieveAPIView(generics.RetrieveAPIView):
     """Контроллер для просмотра данных продавца"""
 
     serializer_class = LinkSerializer
     permission_classes = [IsAuthenticated]
 
+
 class LinkUpdateAPIView(generics.UpdateAPIView):
     """Контроллер для обновления данных продавца"""
 
     serializer_class = LinkSerializer
     permission_classes = [IsAdminUser]
+
 
 class LinkDestroyAPIView(generics.DestroyAPIView):
     """Контроллер для удаления данных продавца"""

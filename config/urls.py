@@ -25,7 +25,10 @@ schema_view = get_schema_view(
 )
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include('employee.urls', namespace='employee')),
+    path("", include("employee.urls", namespace="employee")),
+    path("", include("factory.urls", namespace="factory")),
+    path("", include("links.urls", namespace="links")),
+    path("", include("products.urls", namespace="products")),
     path(
         "docs/",
         schema_view.with_ui("swagger", cache_timeout=0),
