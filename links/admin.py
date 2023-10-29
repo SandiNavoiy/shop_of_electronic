@@ -7,5 +7,5 @@ from links.models import Link
 @admin.register(Link)
 class LinkAdmin(admin.ModelAdmin):
     list_display = ("name_compani", "country", "city", "email")
-    date_hierarchy = 'release_date'  # иерархия по датам
-    list_filter = ('country', 'city')
+    date_hierarchy = "release_date"  # иерархия по датам
+    list_filter = ("country", "city")
