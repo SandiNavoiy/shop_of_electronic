@@ -16,6 +16,7 @@ class Retail_network(models.Model):
     )  # Контакты продавца
     products = models.ManyToManyField(Product, verbose_name="Продукты")  # Продукты
     debt = models.DecimalField(
+        default=0,
         max_digits=21,
         decimal_places=2,
         verbose_name="Задолженность перед поставщиком",
