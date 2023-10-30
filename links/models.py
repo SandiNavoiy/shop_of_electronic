@@ -25,7 +25,7 @@ class Link(models.Model):
     )
 
     def __str__(self):
-        return f"{self.name_compani} {self.email}"
+        return f"Название компании {self.name_compani}, Эл. адрес {self.email}, Город: {self.city}, Улица: {self.street}, Страна: {self.country}"
 
     class Meta:
         ordering = ("pk",)
