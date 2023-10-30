@@ -19,7 +19,8 @@ class Retail_network(models.Model):
         max_digits=21,
         decimal_places=2,
         verbose_name="Задолженность перед поставщиком",
-        **NULLABLE
+        **NULLABLE,
+        editable=False    # Запрет обновления поля через API
     )
     creation_time = models.DateTimeField(
         auto_now_add=True, verbose_name="время создания"
