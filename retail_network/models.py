@@ -12,7 +12,7 @@ class Retail_network(models.Model):
 
     title = models.CharField(max_length=50, verbose_name="Название")  # Название звена
     contacts = models.ForeignKey(
-        Link, verbose_name="Контакты", on_delete=models.CASCADE
+        Link, verbose_name="Контакты поставщика", on_delete=models.CASCADE
     )  # Контакты продавца
     products = models.ManyToManyField(Product, verbose_name="Продукты")  # Продукты
     debt = models.DecimalField(

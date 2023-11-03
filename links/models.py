@@ -29,5 +29,5 @@ class Link(models.Model):
 
     class Meta:
         ordering = ("pk",)
-        verbose_name = "Контакты"
-        verbose_name_plural = "Контакты"
+        verbose_name = "Контакты поставщика"
+        verbose_name_plural = "Контакты поставщиков"
