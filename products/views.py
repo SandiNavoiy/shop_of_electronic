@@ -1,16 +1,20 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
-
+from rest_framework.response import Response
+from factory.models import Factory
+from factory.serializers import FactorySerializer
 from products.models import Product
 from products.pagination import ProductPaginator
 from products.serializers import ProductSerializer
+from rest_framework import status
 
 
 class ProductCreateAPIView(generics.CreateAPIView):
     """Контроллер для создания продукта"""
 
     serializer_class = ProductSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
+
 
 
 class ProductListAPIView(generics.ListAPIView):
