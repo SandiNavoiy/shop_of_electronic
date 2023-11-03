@@ -1,5 +1,7 @@
 from rest_framework import authentication
 from rest_framework import exceptions
+
+
 class IsActiveUserAuthentication(authentication.BaseAuthentication):
     def authenticate(self, request):
         user = request.user

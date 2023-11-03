@@ -1,4 +1,3 @@
-
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework import authentication
@@ -24,8 +23,7 @@ class EmployeeListAPIView(generics.ListAPIView):
 
     serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
-    # permission_classes = [IsAuthenticated]
-
+    permission_classes = [IsAuthenticated]
 
 
 class EmployeeRetrieveAPIView(generics.RetrieveAPIView):
@@ -33,8 +31,7 @@ class EmployeeRetrieveAPIView(generics.RetrieveAPIView):
 
     serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
-    # permission_classes = [IsAuthenticated]
-
+    permission_classes = [IsAuthenticated]
 
 
 class EmployeeUpdateAPIView(generics.UpdateAPIView):
@@ -42,14 +39,15 @@ class EmployeeUpdateAPIView(generics.UpdateAPIView):
 
     serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
-    # permission_classes = [IsAdminUser]
+    permission_classes = [IsAdminUser]
 
 
 class EmployeeDestroyAPIView(generics.DestroyAPIView):
     """Контроллер для удаления пользователя"""
 
     queryset = Employee.objects.all()
-    # permission_classes = [IsAdminUser]
+    permission_classes = [IsAdminUser]
+
 
 class IsActiveUserAuthentication(authentication.BaseAuthentication):
     def authenticate(self, request):
